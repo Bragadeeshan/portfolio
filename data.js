@@ -41,7 +41,7 @@ const PORTFOLIO_CONFIG = {
       title: "YT Bot",
       summary: "Automation-focused scripting project demonstrating workflow automation and integration logic.",
       tech: ["Python", "Automation"],
-      image: "assets/projects/ytbot.jpg",
+      image: "assets/projects/ytbot.png",
       githubRepo: "ytbot"
     },
 
