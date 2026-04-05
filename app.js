@@ -442,3 +442,29 @@ function getProjectInitials(title) {
     .toUpperCase();
 
 }
+
+/* =========================
+   MUSIC WIDGET
+========================= */
+
+const musicWidget   = document.getElementById('musicWidget');
+const musicMinimize = document.getElementById('musicMinimize');
+
+if (musicWidget && musicMinimize) {
+
+  if (sessionStorage.getItem('musicMinimized') === '1') {
+    musicWidget.classList.add('minimized');
+    musicMinimize.textContent = '+';
+  }
+
+  setTimeout(() => {
+    musicWidget.classList.add('visible');
+  }, 2500);
+
+  musicMinimize.addEventListener('click', () => {
+    const isNowMinimized = musicWidget.classList.toggle('minimized');
+    musicMinimize.textContent = isNowMinimized ? '+' : '—';
+    sessionStorage.setItem('musicMinimized', isNowMinimized ? '1' : '0');
+  });
+
+}
